@@ -4,7 +4,7 @@
   "description": "un server care trimite mailuri",
   "main": "app.js",
   "scripts": {
-    "start": "node app"
+    "start": "node app.js"
   },
   "keywords": [
     "mail"
