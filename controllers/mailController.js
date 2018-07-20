@@ -16,13 +16,13 @@ var transporter = nodemailer.createTransport({
 
 module.exports = function(app) {
   app.get('/', function(req, res) {
-    if (req.url == '/') {
-      res.writeHead(200, {
-        'Content-Type': 'text/html'
-      });
-      console.log('ceva');
-      fs.createReadStream('./views/mail.html').pipe(res);
-    }
+    // if (req.url == '/') {
+    res.writeHead(200, {
+      'Content-Type': 'text/html'
+    });
+    console.log('ceva');
+    fs.createReadStream('./views/mail.html').pipe(res);
+    // }
   });
   app.post('/email', urlencodedParser, function(req, res) {
     // get data from the view and added to mangodb
