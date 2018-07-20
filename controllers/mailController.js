@@ -15,8 +15,8 @@ var transporter = nodemailer.createTransport({
 });
 
 module.exports = function(app) {
-  app.get('/email', function(req, res) {
-    if (req.url == '/email') {
+  app.get('/', function(req, res) {
+    if (req.url == '/') {
       res.writeHead(200, {
         'Content-Type': 'text/html'
       });
